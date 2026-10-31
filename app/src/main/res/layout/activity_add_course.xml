@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="20dp">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="录入新课程" android:textSize="24sp" android:textStyle="bold" android:layout_marginBottom="20dp"/>
+
+    <EditText android:id="@+id/et_course_name" android:layout_width="match_parent" android:layout_height="50dp" android:hint="课程名称 (如: 高等数学)" />
+    <EditText android:id="@+id/et_time" android:layout_width="match_parent" android:layout_height="50dp" android:hint="上课时间 (如: 周二 1-2节)" android:layout_marginTop="10dp"/>
+    <EditText android:id="@+id/et_location" android:layout_width="match_parent" android:layout_height="50dp" android:hint="上课地点 (如: 逸夫楼 101)" android:layout_marginTop="10dp"/>
+    <EditText android:id="@+id/et_class_name" android:layout_width="match_parent" android:layout_height="50dp" android:hint="授课班级 (如: 计科2101班)" android:layout_marginTop="10dp"/>
+
+    <Button android:id="@+id/btn_save_course" android:layout_width="match_parent" android:layout_height="50dp" android:text="保存课表" android:backgroundTint="#1976D2" android:layout_marginTop="30dp"/>
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <!-- 1. 顶部：课程名称 -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android移动开发"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#1976D2"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 2. 中间：课程信息 (通过 bias 控制它偏向中间偏上一点) -->
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/btn_layout"
+        app:layout_constraintVertical_bias="0.4">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上课时间：周一 1-2节"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上课地点：逸夫楼 302"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="授课班级：计科2101班"
+            android:textSize="18sp"
+            android:textColor="#FF5722"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 3. 底部：操作按钮群 -->
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- 原来的查看名单按钮 -->
+        <Button
+            android:id="@+id/btn_view_students"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="查看该班级学生名单"
+            android:backgroundTint="#1976D2"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- 新增的加入学生按钮 -->
+        <Button
+            android:id="@+id/btn_add_student"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="加入学生信息"
+            android:backgroundTint="#4CAF50" /> <!-- 用绿色区分 -->
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

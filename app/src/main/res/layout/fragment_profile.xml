@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#F5F5F5">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:color/white" android:orientation="horizontal" android:padding="20dp" android:gravity="center_vertical">
+            <TextView android:id="@+id/tv_avatar" android:layout_width="70dp" android:layout_height="70dp" android:background="#1976D2" android:gravity="center" android:text="师" android:textColor="@android:color/white" android:textSize="30sp" />
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="20dp" android:orientation="vertical">
+                <TextView android:id="@+id/tv_username" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="教师姓名" android:textColor="#333333" android:textSize="22sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tv_work_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="工号: teacher" android:textColor="#999999" android:textSize="14sp" android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View android:layout_width="match_parent" android:layout_height="10dp" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@android:color/white" android:orientation="vertical">
+            <LinearLayout android:id="@+id/item_setting" android:layout_width="match_parent" android:layout_height="60dp" android:orientation="horizontal" android:padding="15dp" android:gravity="center_vertical" android:background="?attr/selectableItemBackground">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="⚙️ 账号设置" android:textSize="16sp" android:textColor="#333"/>
+                <View android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=">" android:textColor="#999" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button android:id="@+id/btn_logout" android:layout_width="match_parent" android:layout_height="50dp" android:layout_margin="20dp" android:backgroundTint="#FFFFFF" android:text="退出登录" android:textColor="#FF4444" android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
